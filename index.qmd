@@ -4,7 +4,7 @@ theme: solar
 
 format: html
 title-slide-style: pandoc
-colortheme: white
+colortheme: grey
 
 listing:
   contents: posts
@@ -16,8 +16,6 @@ listing:
   filter-ui: true
  
 page-layout: full
-title-block-banner: "qwq.jpg"
-title-block-banner-color: White
 ---
 
 
