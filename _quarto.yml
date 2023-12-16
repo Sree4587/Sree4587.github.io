@@ -9,8 +9,6 @@ website:
   navbar:
     right:
       - about.qmd
-      - icon: linkedin
-        href: www.linkedin.com/in/sreenath-k
 format:
   html:
     theme: solar
