@@ -1,5 +1,5 @@
 ---
-title: "Welcome to The World of Machine Learning (CS5805)"
+title: "My Blog on Machine Learning."
 theme: solar
 
 format: html
