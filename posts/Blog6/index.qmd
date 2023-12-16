@@ -69,7 +69,6 @@ ax1.legend()
 
 # ARIMA simulation
 
-Prepare the data for Monte Carlo simulation.
 
 In this section of the script, the data is prepared for ARIMA prediction. This involves calculating the daily returns of the closing prices, determining the drift (which represents the average daily return adjusted for variance), and generating random variables for the simulation. These steps are crucial where random future scenarios are generated based on historical data to estimate potential future stock prices.
 
