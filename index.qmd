@@ -1,0 +1,24 @@
+---
+title: "Welcome to The World of Machine Learning (CS5805)"
+theme: solar
+
+format: html
+title-slide-style: pandoc
+colortheme: white
+
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  
+  categories: false
+  sort-ui: false
+  filter-ui: true
+ 
+page-layout: full
+title-block-banner: "qwq.jpg"
+title-block-banner-color: White
+---
+
+
+
