@@ -1,0 +1,121 @@
+---
+title: "Linear Progression"
+date: 2023-11-02
+output:
+    quarto::quarto_paper:
+        toc: true
+        number_sections: true
+---
+
+In this blog post, we will showcase a simple linear regression model using a real dataset named the "Auto Insurance" dataset. The objective is to illustrate the application of simple linear regression, specifically predicting the total payment for all claims in thousands of currency (y) based on the total number of claims (x) in the dataset.
+
+# Importing Libraries
+
+In this section, essential libraries for data manipulation, mathematical operations, and visualization are imported.
+
+```{python}
+import pandas as pd
+import numpy as np
+import math
+import matplotlib.pyplot as plt
+import plotly.express as px
+```
+
+# Exploring Dataset and Visualization
+
+In this section, the "insurance.csv" file is loaded into a pandas DataFrame. The exploration of the data is initiated by printing information about the DataFrame, its columns, and the first 10 rows. Additionally, data visualization is performed through the creation of box plots for the 'X' and 'Y' columns, as well as a scatter plot depicting the relationship between 'X' and 'Y'.
+
+```{python}
+data = pd.read_csv('insurance.csv')
+print(data.columns)
+data.head(10)
+```
+
+
+
+```{python}
+fig = px.box(data['X'], points = 'all')
+fig.update_layout(title = f'Distribution of X',title_x=0.5, yaxis_title= "Number of Insurance Claims")
+fig.show()
+```
+
+
+
+```{python}
+fig = px.box(data['Y'], points = 'all')
+fig.update_layout(title = f'Distribution of Y',title_x=0.5, yaxis_title= "Amount of Insurance Paid")
+fig.show()
+```
+
+
+
+```{python}
+fig = px.scatter(x = data['X'], y=data['Y'])
+fig.update_layout(xaxis_title= "Number of Claims", yaxis_title="Payment in Claims", height = 500, width = 700)
+fig.update_xaxes(showline=True, linewidth=2, linecolor='black', mirror=True)
+fig.update_yaxes(showline=True, linewidth=2, linecolor='black', mirror=True)
+fig.show()
+```
+
+
+
+# Calculating Statistics, Covariance and Coefficient of Linear Progression
+
+In this section, the mean and variance of the 'X' and 'Y' columns are computed and printed. Additionally, the covariance between 'X' and 'Y' is calculated. Subsequently, the coefficients for the linear regression model are computed.
+
+```{python}
+mean_x = np.mean(data['X'])
+mean_y = np.mean(data['Y'])
+var_x = np.var(data['X'])
+var_y = np.var(data['Y'])
+print('x stats: mean= %.3f   variance= %.3f' % (mean_x, var_x))
+print('y stats: mean= %.3f   variance= %.3f' % (mean_y, var_y))
+```
+
+
+```{python}
+def covariance(x, y):
+    mean_x = np.mean(x)
+    mean_y = np.mean(y)
+    covar = 0.0
+    for i in range(len(x)):
+        covar += (x[i] - mean_x) * (y[i] - mean_y)
+    return covar/len(x)
+covar_xy = covariance(data['X'], data['Y'])
+print(f'Cov(X,Y): {covar_xy}')
+```
+
+
+
+```{python}
+b1 = covar_xy / var_x
+b0 = mean_y - b1 * mean_x
+
+print(f'Coefficents:\n b0: {b0}  b1: {b1} ')
+```
+
+ # Predicting and Visualizing the Results
+
+In this segment, the 'Y' values are predicted using the calculated coefficients, and a plot is generated to visually compare the actual and predicted values. This code effectively executes a simple linear regression on the dataset, aiming to model the relationship between a single feature (independent variable 'X') and a real-valued target (dependent variable 'Y'). 
+
+```{python}
+x = data['X'].values.copy()
+y_hat = b0 + b1 * x
+y = data['Y'].values
+import plotly.graph_objects as go
+fig = go.Figure()
+
+fig.add_trace(go.Scatter(x=data['X'], y=data['Y'], name='train', mode='markers', marker_color='rgba(152, 0, 0, .8)'))
+fig.add_trace(go.Scatter(x=data['X'], y=y_hat, name='prediction', mode='lines+markers', marker_color='rgba(0, 152, 0, .8)'))
+
+fig.update_layout(title_x=0.5, xaxis_title= "Number of Claims", yaxis_title="Payment in Claims")
+fig.update_xaxes(showline=True, linewidth=2, linecolor='black', mirror=True)
+fig.update_yaxes(showline=True, linewidth=2, linecolor='black', mirror=True)
+fig.show()
+```
+
+
+
+
+# Conclusion
+The fundamental objective of linear regression is to establish a model representing the relationship between a single feature, denoted as the independent variable 'X,' and a real-valued target, referred to as the dependent variable 'Y.' The underlying assumption is that a linear relationship exists between 'X' and 'Y,' and the model endeavors to identify the optimal fit line that best captures this relationship among the data points. The aim is to create a linear equation that can predict 'Y' based on the values of 'X' with the least amount of error.
