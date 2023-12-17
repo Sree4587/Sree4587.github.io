@@ -1,6 +1,8 @@
 ---
 title: "Linear Progression"
 date: 2023-11-02
+author: "Sreenath Krishnan Potty"
+categories: [Linear Progression, Auto-Insurance]
 output:
     quarto::quarto_paper:
         toc: true
@@ -119,3 +121,4 @@ fig.show()
 
 # Conclusion
 The fundamental objective of linear regression is to establish a model representing the relationship between a single feature, denoted as the independent variable 'X,' and a real-valued target, referred to as the dependent variable 'Y.' The underlying assumption is that a linear relationship exists between 'X' and 'Y,' and the model endeavors to identify the optimal fit line that best captures this relationship among the data points. The aim is to create a linear equation that can predict 'Y' based on the values of 'X' with the least amount of error.
+[SOURCE](https://github.com/Sree4587/sree4587.github.io/blob/main/posts/Blog3/index.qmd)

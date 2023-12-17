@@ -1,6 +1,8 @@
 ---
 title: "Non-Linear Progression"
 date: 2023-11-02
+author: "Sreenath Krishnan Potty"
+categories: [Nonlinear Progression, Sigmoid]
 output:
     quarto::quarto_paper:
         toc: true
@@ -124,3 +126,4 @@ print("R2-score: %.2f" % r2_score(y_hat , test_y) )
 
 # Conclusion
 In summary, this script provides a comprehensive demonstration of loading, visualizing, and analyzing data in Python. It guides through the process of fitting a model to the data and evaluating its performance using various metrics. The utilization of a sigmoid function, in particular, showcases its application for modeling growth trends. Overall, the script serves as a practical example of data analysis and modeling in a Python environment.
+[SOURCE](https://github.com/Sree4587/sree4587.github.io/blob/main/posts/Blog4/index.qmd)

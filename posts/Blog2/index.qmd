@@ -1,6 +1,8 @@
 ---
 title: "Clustering of Shopping Data with K-means Clustering"
 date: 2023-10-21
+author: "Sreenath Krishnan Potty"
+categories: [Clustering, K-means]
 output:
   quarto::quarto_paper:
     toc: true
@@ -127,3 +129,5 @@ As observed, clusters 3 and 5 exhibit higher spending scores.
 For Cluster 3, comprising individuals aged less than 30 with very high annual incomes, their elevated spending scores align with expectations. To sustain and enhance this trend, offering these individuals improved incentives and exclusive deals could be an effective strategy.
 
 Cluster 5 consists of individuals aged less than 30 with comparatively lower incomes. Despite their lower financial capacity, this group shows a preference for shopping. To further engage them, enticing offers such as discounts and additional freebies could be implemented to augment their spending within the establishment.
+
+[SOURCE](https://github.com/Sree4587/sree4587.github.io/blob/main/posts/Blog2/index.qmd)

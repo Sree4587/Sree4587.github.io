@@ -1,6 +1,8 @@
 ---
 title: "Heart Disease Classification and Prediction using KNN Model"
 date: 2023-10-13
+author: "Sreenath Krishnan Potty"
+categories: [Classification, KNN Model]
 output:
   quarto::quarto_paper:
     toc: true
@@ -114,3 +116,5 @@ print("Maximum KNN Score is {:.2f}%".format(acc))
 
 # Conclusion
 The KNN model classification has been executed with an accuracy of 72.13%.
+
+[SOURCE](https://github.com/Sree4587/sree4587.github.io/blob/main/posts/Blog1/index.qmd)

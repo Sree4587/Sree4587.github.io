@@ -1,6 +1,8 @@
 ---
 title: "Netflix Stock Prediction"
 date: 2023-11-14
+author: "Sreenath Krishnan Potty"
+categories: [Probability, Prediction]
 output:
     quarto::quarto_paper:
         toc: true
@@ -134,3 +136,4 @@ fig.show()
 
 # Conclusion
 The script employs the ARIMA prediction to estimate future prices of Netflix's stock based on historical prices. In this context, the assumption is made that the daily returns of the stock follow a log-normal distribution. The historical mean and standard deviation of the daily returns are then used to generate random daily returns for the simulation. This approach allows for the creation of multiple potential future scenarios, capturing the inherent uncertainty in stock price movements.
+[SOURCE](https://github.com/Sree4587/sree4587.github.io/blob/main/posts/Blog6/index.qmd)

@@ -1,6 +1,8 @@
 ---
 title: "Time Series Anomaly Detection"
 date: 2023-11-08
+author: "Sreenath Krishnan Potty"
+categories: [Anomaly Detection, Time series]
 output:
     quarto::quarto_paper:
         toc: true
@@ -241,3 +243,4 @@ plt.show()
 
 # Conclusion
 The script identifies anomalies as data points with a reconstruction error surpassing the specified threshold. Furthermore, it showcases the assessment of the model's learning by comparing the original and predicted sequences for a sample from the training data. This step aids in understanding how effectively the model has learned to reconstruct normal data. Additionally, the script illustrates the normalization of the test data using the mean and standard deviation derived from the training data. This normalization is crucial because the model was trained on normalized data, ensuring that the test data is normalized in the same manner for the model to make accurate predictions. This consistency in normalization is vital for the model's effectiveness in handling unseen data.
+[SOURCE](https://github.com/Sree4587/sree4587.github.io/blob/main/posts/Blog5/index.qmd)
