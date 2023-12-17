@@ -1,6 +1,6 @@
 ---
 title: "My Blog on Machine Learning."
-theme: solar
+theme: default
 
 format: html
 title-slide-style: pandoc

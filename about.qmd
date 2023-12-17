@@ -10,8 +10,8 @@ about:
     - icon: instagram
       text: instagram
       href: https://github.com/sreenaaaath
-    - icon: mail
-      text: mail
+    - icon: Email
+      text: Email
       href: thisissreenath@gmail.com
 ---
 

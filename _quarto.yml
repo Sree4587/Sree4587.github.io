@@ -11,7 +11,7 @@ website:
       - about.qmd
 format:
   html:
-    theme: solar
+    theme: default
     css: styles.css
     
     
