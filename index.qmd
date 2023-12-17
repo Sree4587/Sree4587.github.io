@@ -17,6 +17,3 @@ listing:
  
 page-layout: full
 ---
-
-
-
